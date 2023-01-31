@@ -11,37 +11,37 @@ public class Twhinh204120Entity {
     @Column(name = "id")
     private Integer id;
     @Basic
-    @Column(name = "oorg", nullable = true, length = 4)
-    private String oorg;
+    @Column(name = "t_oorg", nullable = true, length = 50)
+    private String tOorg;
     @Basic
-    @Column(name = "t_orno", nullable = true, length = 9)
+    @Column(name = "t_orno", nullable = true, length = 50)
     private String tOrno;
     @Basic
-    @Column(name = "t_oset", nullable = true, length = 6)
+    @Column(name = "t_oset", nullable = true, length = 50)
     private String tOset;
     @Basic
-    @Column(name = "t_prty", nullable = true, length = 6)
+    @Column(name = "t_prty", nullable = true, length = 50)
     private String tPrty;
     @Basic
-    @Column(name = "t_acno", nullable = true, length = 6)
+    @Column(name = "t_acno", nullable = true, length = 50)
     private String tAcno;
     @Basic
-    @Column(name = "t_acti", nullable = true, length = 20)
+    @Column(name = "t_acti", nullable = true, length = 50)
     private String tActi;
     @Basic
-    @Column(name = "t_appl", nullable = true, length = 6)
+    @Column(name = "t_appl", nullable = true, length = 50)
     private String tAppl;
     @Basic
-    @Column(name = "t_auto", nullable = true, length = 6)
+    @Column(name = "t_auto", nullable = true, length = 50)
     private String tAuto;
     @Basic
-    @Column(name = "t_odvc", nullable = true, length = 15)
+    @Column(name = "t_odvc", nullable = true, length = 50)
     private String tOdvc;
     @Basic
-    @Column(name = "t_Refcntd", nullable = true, length = 9)
+    @Column(name = "t_Refcntd", nullable = true, length = 50)
     private String tRefcntd;
     @Basic
-    @Column(name = "t_Refcntu", nullable = true, length = 9)
+    @Column(name = "t_Refcntu", nullable = true, length = 50)
     private String tRefcntu;
 
 
@@ -74,12 +74,12 @@ public class Twhinh204120Entity {
         this.id = id;
     }
 
-    public String getOorg() {
-        return oorg;
+    public String gettOorg() {
+        return tOorg;
     }
 
-    public void setOorg(String oorg) {
-        this.oorg = oorg;
+    public void settOorg(String oorg) {
+        this.tOorg = tOorg;
     }
 
     public String gettOrno() {
@@ -175,4 +175,19 @@ public class Twhinh204120Entity {
         return Objects.hash(oorg, tOrno, tOset, tPrty, tAcno, tActi, tAppl, tAuto, tOdvc, tRefcntd, tRefcntu);
     }*/
 
+    public Twhinh204120Entity(Integer id, String tOorg, String tOrno, String tOset, String tPrty, String tAcno, String tActi, String tAppl, String tAuto, String tOdvc, String tRefcntd, String tRefcntu, Twhinh200120Entity twhinh200120Entity) {
+        this.id = id;
+        this.tOorg = tOorg;
+        this.tOrno = tOrno;
+        this.tOset = tOset;
+        this.tPrty = tPrty;
+        this.tAcno = tAcno;
+        this.tActi = tActi;
+        this.tAppl = tAppl;
+        this.tAuto = tAuto;
+        this.tOdvc = tOdvc;
+        this.tRefcntd = tRefcntd;
+        this.tRefcntu = tRefcntu;
+        this.twhinh200120Entity = twhinh200120Entity;
+    }
 }

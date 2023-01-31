@@ -1,5 +1,8 @@
 package com.cofat.GestionMagasin.entities;
 
+import jdk.jfr.Timespan;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -7,8 +10,10 @@ import java.util.Objects;
 @Entity
 @Table(name = "ttcibd004xxx")
 public class Ttcibd004XxxEntity {
-   // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    private int id;
+    @Basic
     @Column(name = "t_citt", nullable = true, length = 6)
     private String tCitt;
     //concatination = unique
@@ -105,6 +110,28 @@ public class Ttcibd004XxxEntity {
         if (o == null || getClass() != o.getClass()) return false;
         Ttcibd004XxxEntity that = (Ttcibd004XxxEntity) o;
         return Objects.equals(tCitt, that.tCitt) && Objects.equals(tBpid, that.tBpid) && Objects.equals(tItem, that.tItem) && Objects.equals(tAitc, that.tAitc) && Objects.equals(tRefcntd, that.tRefcntd) && Objects.equals(tRefcntu, that.tRefcntu);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Ttcibd004XxxEntity() {
+    }
+
+    public Ttcibd004XxxEntity(int id, String tCitt, String tBpid, String tItem, String tAitc, String tRefcntd, String tRefcntu, Ttcibd001120Entity ttcibd001120Entity) {
+        this.id = id;
+        this.tCitt = tCitt;
+        this.tBpid = tBpid;
+        this.tItem = tItem;
+        this.tAitc = tAitc;
+        this.tRefcntd = tRefcntd;
+        this.tRefcntu = tRefcntu;
+        this.ttcibd001120Entity = ttcibd001120Entity;
     }
 
     @Override

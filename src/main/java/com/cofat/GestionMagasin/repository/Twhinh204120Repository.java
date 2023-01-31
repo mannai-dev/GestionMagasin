@@ -12,8 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 public interface Twhinh204120Repository extends JpaRepository<Twhinh204120Entity, String> {
     @Transactional
     @Modifying
-    @Query("DELETE FROM Twhinh204120Entity p where p.oorg = :oorg")
-    public void deleteByOorg(@Param("oorg") String oorg);
+    @Query("DELETE FROM Twhinh204120Entity p where p.tOorg = :tOorg")
+    public void deleteByOorg(@Param("tOorg") String tOorg);
 
     @Transactional
    // @Modifying

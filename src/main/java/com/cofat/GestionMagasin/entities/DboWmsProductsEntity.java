@@ -15,7 +15,7 @@ public class DboWmsProductsEntity implements Serializable {
     @Column(name = "id", nullable = false, length = 4)
     private String id;
     @Basic
-    @Column(name = "Internalcode", nullable = true, length = 18)
+    @Column(name = "InternalCode", nullable = true, length = 18)
     private String internalCode;
     @Basic
     @Column(name = "Code", nullable = true, length = 15)
@@ -24,58 +24,58 @@ public class DboWmsProductsEntity implements Serializable {
     @Column(name = "Name", nullable = true, length = 30)
     private String name;
     @Basic
-    @Column(name = "Wms_Categoryid", nullable = true, length = 20)
+    @Column(name = "Wms_CategoryId", nullable = true, length = 20)
     private String wmsCategoryId;
     @Basic
     @Column(name = "Wms_Sub_Category_Id", nullable = true, length = 23)
     private String wmsSubCategoryId;
     @Basic
-    @Column(name = "Wms_Providervode", nullable = true, length = 22)
+    @Column(name = "Wms_ProviderCode", nullable = true, length = 22)
     private String wmsProviderCode;
     @Basic
-    @Column(name = "Providerproductcode", nullable = true, length = 30)
+    @Column(name = "ProviderProductCode", nullable = true, length = 30)
     private String providerProductCode;
     @Basic
-    @Column(name = "Customerproductcode", nullable = true, length = 25)
+    @Column(name = "CustomerProductCode", nullable = true, length = 25)
     private String customerProductCode;
     @Basic
     @Column(name = "Label2", nullable = true, length = 12)
     private String label2;
     @Basic
-    @Column(name = "Colorcode", nullable = true, length = 15)
+    @Column(name = "ColorCode", nullable = true, length = 15)
     private String colorCode;
     @Basic
-    @Column(name = "Costprice", nullable = true, length = 15)
+    @Column(name = "CostPrice", nullable = true, length = 15)
     private String costPrice;
     @Basic
-    @Column(name = "Lastdnventorydate", nullable = true, length = 23)
+    @Column(name = "LastInventoryDate", nullable = true, length = 23)
     private String lastInventoryDate;
     @Basic
     @Column(name = "Active", nullable = true, length = 12)
     private String active;
     @Basic
-    @Column(name = "Securitystock", nullable = true, length = 19)
+    @Column(name = "SecurityStock", nullable = true, length = 19)
     private String securityStock;
     @Basic
-    @Column(name = "Multiplequantity", nullable = true, length = 22)
+    @Column(name = "MultipleQuantity", nullable = true, length = 22)
     private String multipleQuantity;
     @Basic
     @Column(name = "Unit", nullable = true, length = 10)
     private String unit;
     @Basic
-    @Column(name = "Qualitycode", nullable = true, length = 17)
+    @Column(name = "QualityCode", nullable = true, length = 17)
     private String qualityCode;
     @Basic
-    @Column(name = "Createdonutc", nullable = true, length = 27)
+    @Column(name = "CreatedOnUtc", nullable = true, length = 27)
     private String createdOnUtc;
     @Basic
-    @Column(name = "Createdby", nullable = true, length = 15)
+    @Column(name = "CreatedBy", nullable = true, length = 15)
     private String createdBy;
     @Basic
-    @Column(name = "Updatedonutc", nullable = true, length = 27)
+    @Column(name = "UpdatedOnUtc", nullable = true, length = 27)
     private String updatedOnUtc;
     @Basic
-    @Column(name = "Updatedby", nullable = true, length = 15)
+    @Column(name = "UpdatedBy", nullable = true, length = 15)
     private String updatedBy;
 
     //Constructor

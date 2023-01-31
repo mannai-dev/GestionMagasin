@@ -14,202 +14,202 @@ public class Twhinh200120Entity {
     private Integer id;
 
     @Basic
-    @Column(name = "t_oorg", nullable = true, length = 6)
+    @Column(name = "t_oorg", nullable = true, length = 50)
     private String tOorg;
     @Basic
-    @Column(name = "t_orno", nullable = true, length = 9)
+    @Column(name = "t_orno", nullable = true, length = 50)
     private String tOrno;
     @Basic
-    @Column(name = "t_oset", nullable = true, length = 6)
+    @Column(name = "t_oset", nullable = true, length = 50)
     private String tOset;
     @Basic
-    @Column(name = "t_seri", nullable = true, length = 8)
+    @Column(name = "t_seri", nullable = true, length = 50)
     private String tSeri;
     @Basic
-    @Column(name = "t_ittp", nullable = true, length = 6)
+    @Column(name = "t_ittp", nullable = true, length = 50)
     private String tIttp;
     @Basic
-    @Column(name = "t_odat", nullable = true, length = 23)
+    @Column(name = "t_odat", nullable = true, length = 50)
     private String tOdat;
     @Basic
-    @Column(name = "t_sfty", nullable = true, length = 6)
+    @Column(name = "t_sfty", nullable = true, length = 50)
     private String tSfty;
     @Basic
-    @Column(name = "t_sfco", nullable = true, length = 6)
+    @Column(name = "t_sfco", nullable = true, length = 50)
     private String tSfco;
     @Basic
-    @Column(name = "t_stty", nullable = true, length = 6)
+    @Column(name = "t_stty", nullable = true, length = 50)
     private String tStty;
     @Basic
-    @Column(name = "t_stco", nullable = true, length = 9)
+    @Column(name = "t_stco", nullable = true, length = 50)
     private String tStco;
     @Basic
-    @Column(name = "t_sfcp", nullable = true, length = 6)
+    @Column(name = "t_sfcp", nullable = true, length = 50)
     private String tSfcp;
     @Basic
-    @Column(name = "t_stcp", nullable = true, length = 6)
+    @Column(name = "t_stcp", nullable = true, length = 50)
     private String tStcp;
     @Basic
-    @Column(name = "t_sfad", nullable = true, length = 9)
+    @Column(name = "t_sfad", nullable = true, length = 50)
     private String tSfad;
     @Basic
-    @Column(name = "t_stad", nullable = true, length = 9)
+    @Column(name = "t_stad", nullable = true, length = 50)
     private String tStad;
     @Basic
-    @Column(name = "t_sfit", nullable = true, length = 47)
+    @Column(name = "t_sfit", nullable = true, length = 50)
     private String tSfit;
     @Basic
-    @Column(name = "t_stit", nullable = true, length = 47)
+    @Column(name = "t_stit", nullable = true, length = 50)
     private String tStit;
     @Basic
-    @Column(name = "t_sfrv", nullable = true, length = 6)
+    @Column(name = "t_sfrv", nullable = true, length = 50)
     private String tSfrv;
     @Basic
-    @Column(name = "t_strv", nullable = true, length = 6)
+    @Column(name = "t_strv", nullable = true, length = 50)
     private String tStrv;
     @Basic
-    @Column(name = "t_sflo", nullable = true, length = 10)
+    @Column(name = "t_sflo", nullable = true, length = 50)
     private String tSflo;
     @Basic
-    @Column(name = "t_stlo", nullable = true, length = 10)
+    @Column(name = "t_stlo", nullable = true, length = 50)
     private String tStlo;
     @Basic
-    @Column(name = "t_otyp", nullable = true, length = 6)
+    @Column(name = "t_otyp", nullable = true, length = 50)
     private String tOtyp;
     @Basic
-    @Column(name = "t_depc", nullable = true, length = 6)
+    @Column(name = "t_depc", nullable = true, length = 50)
     private String tDepc;
     @Basic
-    @Column(name = "t_wdep", nullable = true, length = 6)
+    @Column(name = "t_wdep", nullable = true, length = 50)
     private String tWdep;
     @Basic
-    @Column(name = "t_blor", nullable = true, length = 6)
+    @Column(name = "t_blor", nullable = true, length = 50)
     private String tBlor;
     @Basic
-    @Column(name = "t_rtrn", nullable = true, length = 6)
+    @Column(name = "t_rtrn", nullable = true, length = 50)
     private String tRtrn;
     @Basic
-    @Column(name = "t_cons", nullable = true, length = 6)
+    @Column(name = "t_cons", nullable = true, length = 50)
     private String tCons;
     @Basic
-    @Column(name = "t_invc", nullable = true, length = 6)
+    @Column(name = "t_invc", nullable = true, length = 50)
     private String tInvc;
     @Basic
-    @Column(name = "t_bflh", nullable = true, length = 6)
+    @Column(name = "t_bflh", nullable = true, length = 50)
     private String tBflh;
     @Basic
-    @Column(name = "t_rrgd", nullable = true, length = 6)
+    @Column(name = "t_rrgd", nullable = true, length = 50)
     private String tRrgd;
     @Basic
-    @Column(name = "t_dmst", nullable = true, length = 6)
+    @Column(name = "t_dmst", nullable = true, length = 50)
     private String tDmst;
     @Basic
-    @Column(name = "t_carr", nullable = true, length = 6)
+    @Column(name = "t_carr", nullable = true, length = 50)
     private String tCarr;
     @Basic
-    @Column(name = "t_cbin", nullable = true, length = 6)
+    @Column(name = "t_cbin", nullable = true, length = 50)
     private String tCbin;
     @Basic
-    @Column(name = "t_crte", nullable = true, length = 6)
+    @Column(name = "t_crte", nullable = true, length = 50)
     private String tCrte;
     @Basic
-    @Column(name = "t_cdec", nullable = true, length = 6)
+    @Column(name = "t_cdec", nullable = true, length = 50)
     private String tCdec;
     @Basic
-    @Column(name = "t_ptpa", nullable = true, length = 9)
+    @Column(name = "t_ptpa", nullable = true, length = 50)
     private String tPtpa;
     @Basic
-    @Column(name = "t_motv", nullable = true, length = 6)
+    @Column(name = "t_motv", nullable = true, length = 50)
     private String tMotv;
     @Basic
-    @Column(name = "t_delc", nullable = true, length = 6)
+    @Column(name = "t_delc", nullable = true, length = 50)
     private String tDelc;
     @Basic
-    @Column(name = "t_serv", nullable = true, length = 6)
+    @Column(name = "t_serv", nullable = true, length = 50)
     private String tServ;
     @Basic
-    @Column(name = "t_pddt", nullable = true, length = 23)
+    @Column(name = "t_pddt", nullable = true, length = 50)
     private String tPddt;
     @Basic
-    @Column(name = "t_prdt", nullable = true, length = 23)
+    @Column(name = "t_prdt", nullable = true, length = 50)
     private String tPrdt;
     @Basic
-    @Column(name = "t_mint", nullable = true, length = 6)
+    @Column(name = "t_mint", nullable = true, length = 50)
     private String tMint;
     @Basic
-    @Column(name = "t_maxt", nullable = true, length = 6)
+    @Column(name = "t_maxt", nullable = true, length = 50)
     private String tMaxt;
     @Basic
-    @Column(name = "t_mind", nullable = true, length = 6)
+    @Column(name = "t_mind", nullable = true, length = 50)
     private String tMind;
     @Basic
-    @Column(name = "t_maxd", nullable = true, length = 6)
+    @Column(name = "t_maxd", nullable = true, length = 50)
     private String tMaxd;
     @Basic
-    @Column(name = "t_clan", nullable = true, length = 6)
+    @Column(name = "t_clan", nullable = true, length = 50)
     private String tClan;
     @Basic
-    @Column(name = "t_grid", nullable = true, length = 9)
+    @Column(name = "t_grid", nullable = true, length = 50)
     private String tGrid;
     @Basic
-    @Column(name = "t_setn", nullable = true, length = 6)
+    @Column(name = "t_setn", nullable = true, length = 50)
     private String tSetn;
     @Basic
-    @Column(name = "t_info", nullable = true, length = 30)
+    @Column(name = "t_info", nullable = true, length = 50)
     private String tInfo;
     @Basic
-    @Column(name = "t_refe", nullable = true, length = 30)
+    @Column(name = "t_refe", nullable = true, length = 50)
     private String tRefe;
     @Basic
-    @Column(name = "t_isit", nullable = true, length = 6)
+    @Column(name = "t_isit", nullable = true, length = 50)
     private String tIsit;
     @Basic
-    @Column(name = "t_rodr", nullable = true, length = 9)
+    @Column(name = "t_rodr", nullable = true, length = 50)
     private String tRodr;
     @Basic
-    @Column(name = "t_akit", nullable = true, length = 15)
+    @Column(name = "t_akit", nullable = true, length = 50)
     private String tAkit;
     @Basic
-    @Column(name = "t_ctdt", nullable = true, length = 23)
+    @Column(name = "t_ctdt", nullable = true, length = 50)
     private String tCtdt;
     @Basic
-    @Column(name = "t_adat", nullable = true, length = 23)
+    @Column(name = "t_adat", nullable = true, length = 50)
     private String tAdat;
     @Basic
-    @Column(name = "t_clgr", nullable = true, length = 6)
+    @Column(name = "t_clgr", nullable = true, length = 50)
     private String tClgr;
     @Basic
-    @Column(name = "t_list", nullable = true, length = 47)
+    @Column(name = "t_list", nullable = true, length = 50)
     private String tList;
     @Basic
-    @Column(name = "t_item", nullable = true, length = 47)
+    @Column(name = "t_item", nullable = true, length = 50)
     private String tItem;
     @Basic
-    @Column(name = "t_qoro", nullable = true, length = 6)
+    @Column(name = "t_qoro", nullable = true, length = 50)
     private String tQoro;
     @Basic
-    @Column(name = "t_orun", nullable = true, length = 6)
+    @Column(name = "t_orun", nullable = true, length = 50)
     private String tOrun;
     @Basic
-    @Column(name = "t_qord", nullable = true, length = 6)
+    @Column(name = "t_qord", nullable = true, length = 50)
     private String tQord;
     @Basic
-    @Column(name = "t_asst", nullable = true, length = 6)
+    @Column(name = "t_asst", nullable = true, length = 50)
     private String tAsst;
     @Basic
-    @Column(name = "t_txta", nullable = true, length = 6)
+    @Column(name = "t_txta", nullable = true, length = 50)
     private String tTxta;
     @Basic
-    @Column(name = "t_txtb", nullable = true, length = 6)
+    @Column(name = "t_txtb", nullable = true, length = 50)
     private String tTxtb;
     @Basic
-    @Column(name = "t_Refcntd", nullable = true, length = 9)
+    @Column(name = "t_Refcntd", nullable = true, length = 50)
     private String tRefcntd;
     @Basic
-    @Column(name = "t_Refcntu", nullable = true, length = 9)
+    @Column(name = "t_Refcntu", nullable = true, length = 50)
     private String tRefcntu;
     @Basic
-    @Column(name = "t_hsta", nullable = true, length = 6)
+    @Column(name = "t_hsta", nullable = true, length = 50)
     private String tHsta;
 
     @OneToMany(mappedBy = "twhinh200120Entity", cascade = CascadeType.ALL, orphanRemoval = true)

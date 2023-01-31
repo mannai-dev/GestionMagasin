@@ -22,8 +22,8 @@ public class Twhinh204120ServiceImpl implements ITwhinh204120Service {
     }
 
     @Override
-    public void deleteTwhinh204120Entity(String oorg) {
-        twhinh204120Repository.deleteByOorg(oorg);
+    public void deleteTwhinh204120Entity(String tOorg) {
+        twhinh204120Repository.deleteByOorg(tOorg);
 
     }
 

@@ -15,13 +15,13 @@ public class Twhinh204120Controller {
     @Autowired
     Twhinh204120ServiceImpl service;
 
-    // http://localhost:8084/SpringMVC/twhinh204120/add
+    // http://localhost:8086/SpringMVC/twhinh204120/add
     @PostMapping("/add")
     @ResponseBody
     public void add(@RequestBody Twhinh204120Entity twhinh204120Entity) {
         service.addTwhinh204120(twhinh204120Entity);
     }
-    // http://localhost:8084/SpringMVC/twhinh20412/list
+    // http://localhost:8086/SpringMVC/twhinh20412/list
     @GetMapping("/list")
     @ResponseBody
     public List<Twhinh204120Entity> get() {
@@ -31,7 +31,7 @@ public class Twhinh204120Controller {
 
 
 
-    //  http://localhost:8084/SpringMVC/twhinh204120/find/
+    //  http://localhost:8086/SpringMVC/twhinh204120/find/
     @GetMapping("/find/{id}")
     @ResponseBody
     public Twhinh204120Entity getById(@PathVariable("id") Integer id)
@@ -39,7 +39,7 @@ public class Twhinh204120Controller {
         return service.getTwhinh204120EntityById(id);
     }
 //ok
-    // http://localhost:8084/SpringMVC/twhinh204120/delete/oorg
+    // http://localhost:8086/SpringMVC/twhinh204120/delete/oorg
     @DeleteMapping("/delete/{oorg}")
 
     public String delete(@PathVariable("oorg") String oorg) {

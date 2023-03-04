@@ -3,11 +3,15 @@ package com.cofat.GestionMagasin.controller;
 
 
 import com.cofat.GestionMagasin.entities.Extraction1;
+import com.cofat.GestionMagasin.repository.Extraction1Repository;
 import com.cofat.GestionMagasin.services.Extraction1ServiceImpl;
 import org.hibernate.exception.GenericJDBCException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,19 +21,31 @@ import java.util.List;
 public class Extraction1Controller {
     @Autowired
     private Extraction1ServiceImpl  extraction1Service;
+    @Autowired
+    private Extraction1Repository extraction1Repository ;
 
+private Extraction1 extraction1;
+    @Modifying
+    @Transactional
     @GetMapping("/dte")
+  //  @PostMapping("/dte")
     public List<Extraction1> getExtraction1ByDate(@RequestParam("dte") String dte) throws Exception {
         try {
             List<Extraction1> extraction1List= new ArrayList<>();
             extraction1List= extraction1Service.getExtraction1ByDate(dte);
+
             for (Extraction1 e:extraction1List ) {
                 try{
+                    System.out.println("d5alna");
                     extraction1Service.add(e);
+                    System.out.println("ajout1");
+                   // extraction1Repository.save(e);
+                    //System.out.println("ajout2");
                 }
-                catch (Exception b) {throw new Exception("ajout  "+ b ) ;}
+                catch (GenericJDBCException  b) {
+                    System.out.println("ajout  " + b ) ;}
 
-            }
+           }
             return extraction1List;
            // return extraction1Service.getExtraction1ByDate(dte);
         }
@@ -41,5 +57,18 @@ public class Extraction1Controller {
          extraction1Service.getExtraction1ByDate("15-06-2022");
          return  "OK";
     }*/
+
+    @Modifying
+    @Transactional
+    @GetMapping("/add")
+    public void ajout (Extraction1 e){
+        System.out.println("entrée1");
+        e.setCode("test1");
+        e.setMovementId("testtt");
+        extraction1Service.add(e);
+        System.out.println("entrée");
+        extraction1Repository.save(extraction1);
+        System.out.println("sortie");
+    }
 
 }

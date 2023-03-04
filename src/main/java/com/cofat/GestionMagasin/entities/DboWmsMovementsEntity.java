@@ -228,4 +228,12 @@ public class DboWmsMovementsEntity implements Serializable{
     @JoinColumn(name = "Accountid", insertable = false, updatable = false)
     @JsonIgnore
     private DboWmsAccountEntity DboWmsAccountEntity;
+/*
+    @ManyToOne
+    @JoinColumn(name = "date", insertable = false, updatable = false)
+    @JsonIgnore
+    private Extraction1 extraction1;
+
+
+ */
 }

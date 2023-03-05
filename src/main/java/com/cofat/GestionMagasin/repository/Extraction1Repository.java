@@ -36,11 +36,8 @@ public interface Extraction1Repository extends JpaRepository<Extraction1,String>
             "AND CONCAT(SUBSTRING(m.date,9,2) , '-' , SUBSTRING(m.date,6,2) , '-' , SUBSTRING(m.date,1,4))= :dte ;"
             // "SET IDENTITY_INSERT extraction1 OFF; "
             ,  nativeQuery = true)
-
            List<Extraction1> findExtraction1ByDate(String dte);
-    // "CAST(m.date as DATETIME) AS date , " +
-
-
+        // "CAST(m.date as DATETIME) AS date , " +
    /* @Transactional
     @Query(value = "SELECT m.palletbarcode, m.id, m.palletbarcode AS num INTO J1 " +
             "FROM wms_movements m " +

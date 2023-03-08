@@ -16,9 +16,8 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Entity
-@Table(name = "Extraction1")
+//@Table(name = "Extraction1")
 public class Extraction1  implements Serializable{
 
     /* @Id
@@ -36,6 +35,7 @@ public class Extraction1  implements Serializable{
 
     @Column(name = "palletBarCode", nullable = true)
     private String palletBarcode;
+
 
     @Id
     @Column(name = "movementId")
@@ -76,16 +76,41 @@ public class Extraction1  implements Serializable{
 
     @Column(name = "jour", nullable = true)
     private String jour;
+/*
+    @Version
+    @Column(name = "version")
+    private Long version;
 
     public Extraction1(String code, String movementId) {
         this.code = code;
         this.movementId = movementId;
     }
 
+    */
+    public Extraction1 copy() {
+        Extraction1 ee = new Extraction1();
+        ee.setCode(this.getCode());
+        ee.setItem(this.getItem());
+        ee.setTItem(this.getTItem());
+        ee.setPalletBarcode(this.palletBarcode);
+        ee.setMovementId(this.getMovementId());
+        ee.setNum(this.getNum());
+        ee.setProductId(this.getProductId());
+        ee.setInitialQuantity(this.getInitialQuantity());
+        ee.setQte(this.getQte());
+        ee.setDate(this.getDate());
+        ee.setNumOM(this.getNumOM());
+        ee.setOrno(this.getOrno());
+        ee.setTOrno(this.getTOrno());
+        ee.setOset(this.getOset());
+        ee.setTOset(this.getTOset());
+        ee.setMovementType(this.getMovementType());
+        ee.setJour(this.getJour());
+
+        return ee;
+    }
+
        /* getters and setters
-
-
-
     @OneToMany(mappedBy = "extraction1")
     private Collection<DboWmsMovementsEntity> wmsMovementEntities;
 

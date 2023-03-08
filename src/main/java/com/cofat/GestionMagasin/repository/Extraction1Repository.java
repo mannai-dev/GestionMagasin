@@ -14,8 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 //public interface Extraction1Repository extends JpaRepository<Extraction1, Long> {
 public interface Extraction1Repository extends JpaRepository<Extraction1,String>{
 
-   @Transactional
-   @Modifying
+ //  @Transactional
+  // @Modifying
    @Query(value =
          //   " SET IDENTITY_INSERT extraction1 ON;" +
           //  " INSERT INTO extraction1  " +

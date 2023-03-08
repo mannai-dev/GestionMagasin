@@ -23,22 +23,28 @@ public class Extraction1Controller {
     private Extraction1ServiceImpl  extraction1Service;
     @Autowired
     private Extraction1Repository extraction1Repository ;
-
-private Extraction1 extraction1;
-    @Modifying
-    @Transactional
+    private   List<Extraction1> Liste = new ArrayList<>() ;
+    private Extraction1 extraction1;
+   // @Modifying
+  // @Transactional
     @GetMapping("/dte")
-  //  @PostMapping("/dte")
+   @ResponseBody
+  // @PostMapping("/dte")
     public List<Extraction1> getExtraction1ByDate(@RequestParam("dte") String dte) throws Exception {
         try {
             List<Extraction1> extraction1List= new ArrayList<>();
             extraction1List= extraction1Service.getExtraction1ByDate(dte);
-
+            Extraction1 ee = new Extraction1();
             for (Extraction1 e:extraction1List ) {
                 try{
-                    System.out.println("d5alna");
-                    extraction1Service.add(e);
+                     System.out.println("d5alna");
+                  //  extraction1Service.add(e);
+                  //  Extraction1 ee = new Extraction1();
+                     ee = e.copy();
+                     //extraction1Service.add(ee);
+                    extraction1Repository.save(ee);
                     System.out.println("ajout1");
+                    //
                    // extraction1Repository.save(e);
                     //System.out.println("ajout2");
                 }
@@ -59,7 +65,7 @@ private Extraction1 extraction1;
     }*/
 
     @Modifying
-    @Transactional
+  //  @Transactional
     @GetMapping("/add")
     public void ajout (Extraction1 e){
         System.out.println("entrée1");
@@ -69,6 +75,34 @@ private Extraction1 extraction1;
         System.out.println("entrée");
         extraction1Repository.save(extraction1);
         System.out.println("sortie");
+    }
+
+    @PostMapping("/dte")
+    public void post(@RequestParam("dte") String dte) throws Exception {
+        try {
+            List<Extraction1> extraction1List= new ArrayList<>();
+            extraction1List= extraction1Service.getExtraction1ByDate(dte);
+
+            for (Extraction1 e:extraction1List ) {
+                try{
+
+                    extraction1Service.add(e);
+
+                    e = e.copy();
+                    extraction1Repository.save(e);
+                    System.out.println("ajout1");
+                    //  extraction1Service.add(e);
+                    // extraction1Repository.save(e);
+                    //System.out.println("ajout2");
+                }
+                catch (GenericJDBCException  b) {
+                    System.out.println("ajout  " + b ) ;}
+
+            }
+
+            // return extraction1Service.getExtraction1ByDate(dte);
+        }
+        catch (GenericJDBCException e) {throw new Exception("test "+ e ) ;}
     }
 
 }

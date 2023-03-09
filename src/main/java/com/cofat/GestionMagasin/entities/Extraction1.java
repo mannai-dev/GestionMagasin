@@ -92,7 +92,7 @@ public class Extraction1  implements Serializable{
         ee.setCode(this.getCode());
         ee.setItem(this.getItem());
         ee.setTItem(this.getTItem());
-        ee.setPalletBarcode(this.palletBarcode);
+        ee.setPalletBarcode(this.getPalletBarcode());
         ee.setMovementId(this.getMovementId());
         ee.setNum(this.getNum());
         ee.setProductId(this.getProductId());

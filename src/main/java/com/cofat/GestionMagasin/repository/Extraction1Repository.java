@@ -21,7 +21,8 @@ public interface Extraction1Repository extends JpaRepository<Extraction1,String>
           //  " INSERT INTO extraction1  " +
            // " ( code, item, t_item,palletbarcode,id,num,productid,initialquantity,qté," +
             //" extraction1.date ,num_OM,orno,t_orno,oset,t_oset,movementtype,jour) " +
-            "SELECT TOP 1 p.code AS code, p.code AS item, CONCAT('         ' ,p.code) AS t_item, " +
+            "SELECT" +
+                    " p.code AS code, p.code AS item, CONCAT('         ' ,p.code) AS t_item, " +
             "m.palletbarcode AS palletBarCode,m.id AS movementId ,m.palletbarcode AS num, " +
             "m.productid AS productId , m.initialquantity AS initialQuantity ," +
             " m.initialquantity AS qté, m.date , " +

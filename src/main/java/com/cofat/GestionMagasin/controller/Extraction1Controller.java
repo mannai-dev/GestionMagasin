@@ -27,7 +27,7 @@ public class Extraction1Controller {
     private Extraction1 extraction1;
    // @Modifying
   // @Transactional
-    @GetMapping("/dte")
+   @GetMapping("/dte")
    @ResponseBody
     public List<Extraction1> getExtraction1ByDate(@RequestParam("dte") String dte) throws Exception {
         try {

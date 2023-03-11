@@ -3,11 +3,13 @@ package com.cofat.GestionMagasin.services;
 import com.cofat.GestionMagasin.entities.Extraction1;
 //import com.cofat.GestionMagasin.repository.DboWmsMovementsRepository;
 import com.cofat.GestionMagasin.repository.Extraction1Repository;
+import org.springframework.aop.scope.ScopedProxyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +32,8 @@ public class Extraction1ServiceImpl implements IExrtaction1Service {
         List<Extraction1> result = new ArrayList<>();
         for (Extraction1 extraction1 : extractions) {
             Extraction1 extraction = new Extraction1();
+            System.out.println(extraction1);
+            System.out.println(extraction);
             extraction.setCode(extraction1.getCode());
             extraction.setItem(extraction1.getItem());
             extraction.setTItem(extraction1.getTItem());
@@ -47,6 +51,7 @@ public class Extraction1ServiceImpl implements IExrtaction1Service {
             extraction.setTOset(extraction1.getTOset());
             extraction.setMovementType(extraction1.getMovementType());
             extraction.setJour(extraction1.getJour());
+            System.out.println(extraction);
             extraction1Repository.save(extraction);
             result.add(extraction);
         }

@@ -13,6 +13,8 @@ import java.util.Collection;
 
 import java.util.Date;
 
+@Getter
+@Setter
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

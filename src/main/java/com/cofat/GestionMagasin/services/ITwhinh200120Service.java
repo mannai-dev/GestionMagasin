@@ -8,8 +8,9 @@ import java.util.List;
 
 @Service
 public interface ITwhinh200120Service {
-    void addTwhinh200120 (Twhinh200120Entity twhinh200120Entity);
+    void addTwhinh200120 ();
 
+    Twhinh200120Entity nextTwhinh200120();
     List<Twhinh200120Entity> getAllTwhinh200120Entity();
 
     void deleteTwhinh200120Entity(String tOorg);

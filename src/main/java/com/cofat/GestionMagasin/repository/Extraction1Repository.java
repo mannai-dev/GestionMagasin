@@ -17,13 +17,13 @@ public interface Extraction1Repository extends JpaRepository<Extraction1,String>
  //  @Transactional
   // @Modifying
    @Query(value =
-         //   " SET IDENTITY_INSERT extraction1 ON;" +
-          //  " INSERT INTO extraction1  " +
-           // " ( code, item, t_item,palletbarcode,id,num,productid,initialquantity,qté," +
-            //" extraction1.date ,num_OM,orno,t_orno,oset,t_oset,movementtype,jour) " +
-            "SELECT" +
-                    " p.code AS code, p.code AS item, CONCAT('         ' ,p.code) AS t_item, " +
-            "m.palletbarcode AS palletBarCode,m.id AS movementId ,m.palletbarcode AS num, " +
+         /*   " SET IDENTITY_INSERT extraction1 ON;" +
+            " INSERT INTO extraction1  " +
+            " ( movementId , code , item , t_item ,palletBarCode ,num ,productId ,initialQuantity ,qté ," +
+            "date ,num_om,orno,t_orno,oset,t_oset,movementType,jour) " +*/
+            "SELECT " +
+                    "m.id AS movementId , p.code AS code, p.code AS item, CONCAT('         ' ,p.code) AS t_item, " +
+            "m.palletbarcode AS palletBarCode,m.palletbarcode AS num, " +
             "m.productid AS productId , m.initialquantity AS initialQuantity ," +
             " m.initialquantity AS qté, m.date , " +
             "CONCAT( SUBSTRING(m.date,1,4) , SUBSTRING(m.date,6,2) , SUBSTRING(m.date,9,2)) AS num_om , " +

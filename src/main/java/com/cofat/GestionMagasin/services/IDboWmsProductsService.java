@@ -1,6 +1,7 @@
 package com.cofat.GestionMagasin.services;
 
 import com.cofat.GestionMagasin.entities.DboWmsProductsEntity;
+import com.cofat.GestionMagasin.entities.wmsProductsEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,4 +21,4 @@ public interface IDboWmsProductsService {
 
     DboWmsProductsEntity updateDboWmsProductsEntity(DboWmsProductsEntity dboWmsProductsEntity);
 
-}
+    }

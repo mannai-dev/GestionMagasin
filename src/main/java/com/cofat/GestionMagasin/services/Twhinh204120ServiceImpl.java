@@ -1,6 +1,8 @@
 package com.cofat.GestionMagasin.services;
 
+import com.cofat.GestionMagasin.entities.Twhinh200120;
 import com.cofat.GestionMagasin.entities.Twhinh204120Entity;
+import com.cofat.GestionMagasin.entities.Twhinh204120;
 import com.cofat.GestionMagasin.repository.Twhinh204120Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,4 +38,5 @@ public class Twhinh204120ServiceImpl implements ITwhinh204120Service {
     public Twhinh204120Entity updateTwhinh204120Entity(Twhinh204120Entity twhinh204120Entity) {
         return twhinh204120Repository.save(twhinh204120Entity);
     }
+
 }

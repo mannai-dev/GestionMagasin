@@ -3,12 +3,17 @@ package com.cofat.GestionMagasin.services;
 import com.cofat.GestionMagasin.entities.Extraction1;
 //import com.cofat.GestionMagasin.repository.DboWmsMovementsRepository;
 import com.cofat.GestionMagasin.repository.Extraction1Repository;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import org.springframework.aop.scope.ScopedProxyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +23,16 @@ public class Extraction1ServiceImpl implements IExrtaction1Service {
 
     @Autowired
    Extraction1Repository extraction1Repository;
+    @PersistenceContext
+    private EntityManager entityManager;
 
-
+    @Transactional
+    @Modifying
+    @Override
+    public Extraction1 ajouterSortie(Extraction1 sortieStock) {
+        entityManager.persist(sortieStock); // Persist the SortieStock object
+        return extraction1Repository.save(sortieStock); // Save the SortieStock object
+    }
   /*  @Autowired
     DboWmsMovementsRepository dboWmsMovementsRepository ;
 */
@@ -52,7 +65,13 @@ public class Extraction1ServiceImpl implements IExrtaction1Service {
             extraction.setMovementType(extraction1.getMovementType());
             extraction.setJour(extraction1.getJour());
             System.out.println(extraction);
-            extraction1Repository.save(extraction);
+            SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+            Session session = sessionFactory.getCurrentSession();
+           // session.evict(extraction1);
+            //session.saveOrUpdate(extraction1);
+            // extraction1Repository.save(extraction);
+            session.clear();
+            ajouterSortie(extraction);
             result.add(extraction);
         }
         return result;

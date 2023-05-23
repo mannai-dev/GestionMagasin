@@ -19,5 +19,5 @@ public interface IDboWmsAccountService {
     Optional<DboWmsAccountEntity> getDboWmsAccountEntityById(Integer id);
 
     DboWmsAccountEntity updateDboWmsAccountEntity(DboWmsAccountEntity dboWmsAccountEntity);
-
 }
+

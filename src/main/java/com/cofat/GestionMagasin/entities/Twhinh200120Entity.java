@@ -1,5 +1,7 @@
 package com.cofat.GestionMagasin.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.LinkedHashSet;
 import java.util.Objects;
@@ -213,9 +215,11 @@ public class Twhinh200120Entity {
     private String tHsta;
 
     @OneToMany(mappedBy = "twhinh200120Entity", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private Set<Twhinh220120Entity> twhinh220120Entities = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "twhinh200120Entity", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private Set<Twhinh204120Entity> twhinh204120Entities = new LinkedHashSet<>();
 
     public Set<Twhinh204120Entity> getTwhinh204120Entities() {
@@ -782,4 +786,79 @@ public class Twhinh200120Entity {
     public int hashCode() {
         return Objects.hash(tOorg, tOrno, tOset, tSeri, tIttp, tOdat, tSfty, tSfco, tStty, tStco, tSfcp, tStcp, tSfad, tStad, tSfit, tStit, tSfrv, tStrv, tSflo, tStlo, tOtyp, tDepc, tWdep, tBlor, tRtrn, tCons, tInvc, tBflh, tRrgd, tDmst, tCarr, tCbin, tCrte, tCdec, tPtpa, tMotv, tDelc, tServ, tPddt, tPrdt, tMint, tMaxt, tMind, tMaxd, tClan, tGrid, tSetn, tInfo, tRefe, tIsit, tRodr, tAkit, tCtdt, tAdat, tClgr, tList, tItem, tQoro, tOrun, tQord, tAsst, tTxta, tTxtb, tRefcntd, tRefcntu, tHsta);
     }*/
+
+    @Override
+    public String toString() {
+        return "Twhinh200120Entity{" +
+                "id=" + id +
+                ", tOorg='" + tOorg + '\'' +
+                ", tOrno='" + tOrno + '\'' +
+                ", tOset='" + tOset + '\'' +
+                ", tSeri='" + tSeri + '\'' +
+                ", tIttp='" + tIttp + '\'' +
+                ", tOdat='" + tOdat + '\'' +
+                ", tSfty='" + tSfty + '\'' +
+                ", tSfco='" + tSfco + '\'' +
+                ", tStty='" + tStty + '\'' +
+                ", tStco='" + tStco + '\'' +
+                ", tSfcp='" + tSfcp + '\'' +
+                ", tStcp='" + tStcp + '\'' +
+                ", tSfad='" + tSfad + '\'' +
+                ", tStad='" + tStad + '\'' +
+                ", tSfit='" + tSfit + '\'' +
+                ", tStit='" + tStit + '\'' +
+                ", tSfrv='" + tSfrv + '\'' +
+                ", tStrv='" + tStrv + '\'' +
+                ", tSflo='" + tSflo + '\'' +
+                ", tStlo='" + tStlo + '\'' +
+                ", tOtyp='" + tOtyp + '\'' +
+                ", tDepc='" + tDepc + '\'' +
+                ", tWdep='" + tWdep + '\'' +
+                ", tBlor='" + tBlor + '\'' +
+                ", tRtrn='" + tRtrn + '\'' +
+                ", tCons='" + tCons + '\'' +
+                ", tInvc='" + tInvc + '\'' +
+                ", tBflh='" + tBflh + '\'' +
+                ", tRrgd='" + tRrgd + '\'' +
+                ", tDmst='" + tDmst + '\'' +
+                ", tCarr='" + tCarr + '\'' +
+                ", tCbin='" + tCbin + '\'' +
+                ", tCrte='" + tCrte + '\'' +
+                ", tCdec='" + tCdec + '\'' +
+                ", tPtpa='" + tPtpa + '\'' +
+                ", tMotv='" + tMotv + '\'' +
+                ", tDelc='" + tDelc + '\'' +
+                ", tServ='" + tServ + '\'' +
+                ", tPddt='" + tPddt + '\'' +
+                ", tPrdt='" + tPrdt + '\'' +
+                ", tMint='" + tMint + '\'' +
+                ", tMaxt='" + tMaxt + '\'' +
+                ", tMind='" + tMind + '\'' +
+                ", tMaxd='" + tMaxd + '\'' +
+                ", tClan='" + tClan + '\'' +
+                ", tGrid='" + tGrid + '\'' +
+                ", tSetn='" + tSetn + '\'' +
+                ", tInfo='" + tInfo + '\'' +
+                ", tRefe='" + tRefe + '\'' +
+                ", tIsit='" + tIsit + '\'' +
+                ", tRodr='" + tRodr + '\'' +
+                ", tAkit='" + tAkit + '\'' +
+                ", tCtdt='" + tCtdt + '\'' +
+                ", tAdat='" + tAdat + '\'' +
+                ", tClgr='" + tClgr + '\'' +
+                ", tList='" + tList + '\'' +
+                ", tItem='" + tItem + '\'' +
+                ", tQoro='" + tQoro + '\'' +
+                ", tOrun='" + tOrun + '\'' +
+                ", tQord='" + tQord + '\'' +
+                ", tAsst='" + tAsst + '\'' +
+                ", tTxta='" + tTxta + '\'' +
+                ", tTxtb='" + tTxtb + '\'' +
+                ", tRefcntd='" + tRefcntd + '\'' +
+                ", tRefcntu='" + tRefcntu + '\'' +
+                ", tHsta='" + tHsta + '\'' +
+                ", twhinh220120Entities=" + twhinh220120Entities +
+                ", twhinh204120Entities=" + twhinh204120Entities +
+                '}';
+    }
 }

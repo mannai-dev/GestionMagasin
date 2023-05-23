@@ -30,7 +30,7 @@ public class Extraction1Controller {
    @GetMapping("/dte")
    @ResponseBody
     public List<Extraction1> getExtraction1ByDate(@RequestParam("dte") String dte) throws Exception {
-        try {
+       /* try {
             List<Extraction1> extraction1List= new ArrayList<>();
             extraction1List= extraction1Service.getExtraction1ByDate(dte);
             Extraction1 ee = new Extraction1();
@@ -45,7 +45,7 @@ public class Extraction1Controller {
                     System.out.println("ajout1");
                     //
                    // extraction1Repository.save(e);
-                    //System.out.println("ajout2");*/
+                    //System.out.println("ajout2");
                 }
                 catch (GenericJDBCException  b) {
                     System.out.println("ajout  " + b ) ;}
@@ -55,7 +55,8 @@ public class Extraction1Controller {
            // return extraction1Service.getExtraction1ByDate(dte);
         }
         catch (GenericJDBCException e) {throw new Exception("test "+ e ) ;}
-    }
+    */
+       return extraction1Service.getExtraction1ByDate(dte); }
 
 /*
     @PostMapping("/test")
@@ -77,7 +78,7 @@ public class Extraction1Controller {
         System.out.println("sortie");
     }
 
-    @PostMapping("/dte")
+  /*  @PostMapping("/dte")
     public void post(@RequestParam("dte") String dte) throws Exception {
         try {
             List<Extraction1> extraction1List= new ArrayList<>();
@@ -103,6 +104,6 @@ public class Extraction1Controller {
             // return extraction1Service.getExtraction1ByDate(dte);
         }
         catch (GenericJDBCException e) {throw new Exception("test "+ e ) ;}
-    }
+    } */
 
 }

@@ -1,5 +1,6 @@
 package com.cofat.GestionMagasin.repository;
 
+//import com.cofat.GestionMagasin.entities.Twhinh200120Entity;
 import com.cofat.GestionMagasin.entities.Twhinh200120Entity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -23,4 +24,10 @@ public interface Twhinh200120Repository extends JpaRepository<Twhinh200120Entity
     // @Modifying
     @Query("SELECT p FROM Twhinh200120Entity p WHERE p.tOrno = :tOrno")
     Twhinh200120Entity findByTOrno(String tOrno);
+
+   @Transactional
+  //  @Modifying
+   // @Query("SELECT TOP 1 p FROM Twhinh200120Entity p ORDER BY id DESC")
+    @Query(value ="SELECT TOP 1 * FROM twhinh200120 ORDER BY id DESC",  nativeQuery = true)
+    Twhinh200120Entity getLast();
 }

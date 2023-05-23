@@ -134,8 +134,11 @@ public class Ttcibd004XxxEntity {
         this.ttcibd001120Entity = ttcibd001120Entity;
     }
 
+
+
     @Override
     public int hashCode() {
         return Objects.hash(tCitt, tBpid, tItem, tAitc, tRefcntd, tRefcntu);
     }
+
 }
